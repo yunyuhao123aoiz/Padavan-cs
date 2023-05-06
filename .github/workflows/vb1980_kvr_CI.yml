@@ -57,7 +57,7 @@ jobs:
           bash ./go.sh
       - name: Modify custom configs
         run: |                         # 拷贝文件并修改
-          if [ -d vb1980/config ]; then cp -f vb1980/config/* $work_dir; fi
+          
           if [ -d vb1980/modify ]; then cp -rf vb1980/modify/* $work_dir; fi
           if [ -d vb1980/scripts ]; then cp -f vb1980/scripts/* $work_dir; fi
           cd $config_dir
