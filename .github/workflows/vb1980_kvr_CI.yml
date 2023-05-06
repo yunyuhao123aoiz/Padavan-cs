@@ -62,6 +62,12 @@ jobs:
           if [ -d vb1980/scripts ]; then cp -f vb1980/scripts/* $work_dir; fi
           cd $config_dir
           for m in $targets; do if [ -f $m.config ]; then \
+          echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> $m.config #smartdns
+          echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=y" >> $m.config #smartdns二进制文件
+          echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> $m.config #adg DNS去AD
+          echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=y" >> $m.config #DNSFORWARDER
+          echo "CONFIG_FIRMWARE_INCLUDE_CLOUDFLAREDDNS=y" >> $m.config #CLOUDFLAREDDNS
+          echo "CONFIG_FIRMWARE_INCLUDE_DDNSTO=y" >> $m.config #ddnsto  ~0.5M
           echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> .config
           echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=y" >> .config
           echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=y" >> $m.config #SOCAT
